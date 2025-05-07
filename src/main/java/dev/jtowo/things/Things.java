@@ -1,5 +1,7 @@
 package dev.jtowo.things;
 
+import dev.jtowo.things.core.registry.ThingsCreativeModeTabs;
+import dev.jtowo.things.core.registry.ThingsItems;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -16,8 +18,11 @@ public class Things {
     public static final String MOD_ID = "owothings";
 
     @SuppressWarnings("unused")
-    public Things(IEventBus modEventBus, ModContainer modContainer) {
-        modEventBus.addListener(this::commonSetup);
+    public Things(IEventBus eventBus, ModContainer modContainer) {
+        eventBus.addListener(this::commonSetup);
+
+        ThingsItems.register(eventBus);
+        ThingsCreativeModeTabs.register(eventBus);
 
         NeoForge.EVENT_BUS.register(this);
     }
