@@ -1,9 +1,11 @@
 package dev.jtowo.things.data.tags;
 
 import dev.jtowo.things.Things;
+import dev.jtowo.things.core.registry.ThingsItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.NotNull;
@@ -19,5 +21,10 @@ public class ThingsItemTagsProvider extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.@NotNull Provider provider) {
+        tag(ItemTags.DURABILITY_ENCHANTABLE)
+                .add(ThingsItems.MAGICAL_GUITAR.get());
+
+        tag(ItemTags.CROSSBOW_ENCHANTABLE)
+                .add(ThingsItems.MAGICAL_GUITAR.get());
     }
 }

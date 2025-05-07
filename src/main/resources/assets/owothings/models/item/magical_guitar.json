@@ -1,0 +1,18 @@
+{
+  "parent": "minecraft:item/handheld",
+  "loader": "neoforge:separate_transforms",
+  "base": {
+    "parent": "owothings:item/magical_guitar_3d"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "owothings:item/magical_guitar_2d"
+    },
+    "ground": {
+      "parent": "owothings:item/magical_guitar_2d"
+    },
+    "fixed": {
+      "parent": "owothings:item/magical_guitar_2d"
+    }
+  }
+}

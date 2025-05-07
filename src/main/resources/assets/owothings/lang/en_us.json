@@ -1,4 +1,6 @@
 {
   "creativetab.owothings.items": "owo Things",
-  "item.owothings.magical_guitar": "Magical Guitar"
+  "item.owothings.magical_guitar": "Magical Guitar",
+  "item.owothings.note": "Note",
+  "entity.owothings.magic_note": "Magic Note"
 }
