@@ -1,0 +1,10 @@
+{
+  "type": "owothings:add_item",
+  "conditions": [
+    {
+      "condition": "neoforge:loot_table_id",
+      "loot_table_id": "minecraft:entities/warden"
+    }
+  ],
+  "item": "owothings:symphonic_smithing_template"
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": {
+      "item": "minecraft:polished_deepslate"
+    },
+    "E": {
+      "item": "minecraft:echo_shard"
+    },
+    "S": {
+      "item": "minecraft:sculk_sensor"
+    }
+  },
+  "pattern": [
+    "  D",
+    "ED ",
+    "SE "
+  ],
+  "result": {
+    "count": 1,
+    "id": "owothings:magical_guitar"
+  }
+}

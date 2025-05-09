@@ -1,7 +1,9 @@
 package dev.jtowo.things.data;
 
 import dev.jtowo.things.Things;
+import dev.jtowo.things.data.loot.ThingsGlobalLootModifierProvider;
 import dev.jtowo.things.data.models.ThingsItemModelProvider;
+import dev.jtowo.things.data.recipes.SimpleRecipeProvider;
 import dev.jtowo.things.data.tags.ThingsBlockTagsProvider;
 import dev.jtowo.things.data.tags.ThingsItemTagsProvider;
 import net.minecraft.core.HolderLookup;
@@ -24,6 +26,9 @@ public class DataGenerators {
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
 
+        // Recipes
+        generator.addProvider(event.includeServer(), new SimpleRecipeProvider(packOutput, lookupProvider));
+
         // Tags
         BlockTagsProvider blockTagsProvider = new ThingsBlockTagsProvider(packOutput, lookupProvider, existingFileHelper);
         generator.addProvider(event.includeServer(), blockTagsProvider);
@@ -31,5 +36,8 @@ public class DataGenerators {
 
         // Items
         generator.addProvider(event.includeClient(), new ThingsItemModelProvider(packOutput, existingFileHelper));
+
+        // Loot
+        generator.addProvider(event.includeServer(), new ThingsGlobalLootModifierProvider(packOutput, lookupProvider));
     }
 }

@@ -3,6 +3,7 @@ package dev.jtowo.things;
 import dev.jtowo.things.core.registry.ThingsCreativeModeTabs;
 import dev.jtowo.things.core.registry.ThingsEntities;
 import dev.jtowo.things.core.registry.ThingsItems;
+import dev.jtowo.things.core.registry.ThingsLootModifiers;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraft.world.item.component.DyedItemColor;
@@ -29,6 +30,7 @@ public class Things {
         ThingsCreativeModeTabs.register(eventBus);
         ThingsItems.register(eventBus);
         ThingsEntities.register(eventBus);
+        ThingsLootModifiers.register(eventBus);
 
         NeoForge.EVENT_BUS.register(this);
     }

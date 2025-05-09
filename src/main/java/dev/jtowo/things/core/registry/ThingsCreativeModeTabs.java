@@ -17,7 +17,12 @@ public class ThingsCreativeModeTabs {
     @SuppressWarnings("unused")
     public static final Supplier<CreativeModeTab> ITEMS_TAB = CREATIVE_MODE_TABS.register("owothings_items_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ThingsItems.MAGICAL_GUITAR.get())).title(Component.translatable("creativetab." + Things.MOD_ID + ".items"))
-                    .displayItems((itemDisplayParameters, output) -> output.accept(ThingsItems.MAGICAL_GUITAR)).build());
+                    .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(ThingsItems.DEBUG_RAYCAST_STICK);
+                        output.accept(ThingsItems.MAGICAL_GUITAR);
+                        output.accept(ThingsItems.SCULK_HORN);
+                        output.accept(ThingsItems.SYMPHONIC_UPGRADE_SMITHING_TEMPLATE);
+                    }).build());
 
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TABS.register(eventBus);

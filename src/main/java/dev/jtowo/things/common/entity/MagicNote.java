@@ -21,40 +21,22 @@ import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.List;
-import java.util.Random;
-
 public class MagicNote extends ThrowableItemProjectile {
     private static final float LIFETIME_TICKS = 40f;
-    private static final List<DyedItemColor> NOTE_COLORS =
-            List.of(
-                    new DyedItemColor(-8923392, false),
-                    new DyedItemColor(-6963200, false),
-                    new DyedItemColor(-5069568, false),
-                    new DyedItemColor(-3373568, false),
-                    new DyedItemColor(-1940224, false),
-                    new DyedItemColor(-835328, false),
-                    new DyedItemColor(-254464, false),
-                    new DyedItemColor(-131057, false),
-                    new DyedItemColor(-589773, false),
-                    new DyedItemColor(-1572774, false),
-                    new DyedItemColor(-3211133, false),
-                    new DyedItemColor(-5373783, false),
-                    new DyedItemColor(-7995188, false)
-            );
-
-    private int ticksAlive = 0;
 
     public MagicNote(EntityType<MagicNote> type, Level level) {
         super(type, level);
     }
 
-    public MagicNote(Level level, LivingEntity shooter) {
+    public MagicNote(Level level, LivingEntity shooter, int rgb) {
         super(ThingsEntities.MAGIC_NOTE.get(), shooter, level);
         setNoGravity(true);
-        Random rand = new Random();
+        setColor(rgb);
+    }
+
+    public void setColor(int rgb) {
+        DyedItemColor color = new DyedItemColor(rgb, false);
         ItemStack noteItem = new ItemStack(getDefaultItem());
-        DyedItemColor color = NOTE_COLORS.get(rand.nextInt(NOTE_COLORS.size()));
         noteItem.set(DataComponents.DYED_COLOR, color);
         setItem(noteItem);
     }
@@ -106,19 +88,10 @@ public class MagicNote extends ThrowableItemProjectile {
 
     @Override
     public void tick() {
-        setTicksAlive(getTicksAlive() + 1);
         super.tick();
-        if (getTicksAlive() >= LIFETIME_TICKS) {
+        if (this.tickCount >= LIFETIME_TICKS) {
             remove(RemovalReason.DISCARDED);
         }
-    }
-
-    public void setTicksAlive(int ticks) {
-        ticksAlive = ticks;
-    }
-
-    public int getTicksAlive() {
-        return ticksAlive;
     }
 
     /**

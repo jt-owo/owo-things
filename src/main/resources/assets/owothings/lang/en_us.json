@@ -2,5 +2,16 @@
   "creativetab.owothings.items": "owo Things",
   "item.owothings.magical_guitar": "Magical Guitar",
   "item.owothings.note": "Note",
-  "entity.owothings.magic_note": "Magic Note"
+  "entity.owothings.magic_note": "Magic Note",
+  "item.owothings.ceremonial_dagger": "§cCeremonial Dagger",
+  "item.owothings.ceremonial_dagger.desc": "Hold §eSHIFT§r for information",
+  "item.owothings.ceremonial_dagger.desc_shift_down": "§7§oWith the knife returned, we can continue our rituals...",
+  "item.owothings.smithing_template.symphonic_upgrade.additions_slot_description": "Add Echo Shard",
+  "item.owothings.smithing_template.symphonic_upgrade.applies_to": "Instruments",
+  "item.owothings.smithing_template.symphonic_upgrade.base_slot_description": "Add Instrument",
+  "item.owothings.smithing_template.symphonic_upgrade.ingredients": "Echo Shard",
+  "item.owothings.symphonic_smithing_template": "Smithing Template",
+  "upgrade.owothings.symphonic_upgrade": "Symphonic Upgrade",
+  "item.owothings.sculk_horn": "Sculk Horn",
+  "item.owothings.debug_raycast_stick": "Debug Raycast Stick"
 }

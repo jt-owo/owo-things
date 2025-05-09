@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:echo_shard"
+  },
+  "base": {
+    "item": "minecraft:goat_horn"
+  },
+  "result": {
+    "count": 1,
+    "id": "owothings:sculk_horn"
+  },
+  "template": {
+    "item": "owothings:symphonic_smithing_template"
+  }
+}

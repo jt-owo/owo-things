@@ -1,6 +1,7 @@
 package dev.jtowo.things.common.item;
 
 import dev.jtowo.things.common.entity.MagicNote;
+import dev.jtowo.things.common.item.base.MusicWeaponItem;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -9,23 +10,33 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.UseAnim;
-import net.minecraft.world.item.component.Tool;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
-public class GuitarItem extends Item {
+public class GuitarItem extends MusicWeaponItem {
+    private static final List<Integer> NOTE_COLORS =
+            List.of(
+                    -8923392,
+                    -6963200,
+                    -5069568,
+                    -3373568,
+                    -1940224,
+                    -835328,
+                    -254464,
+                    -131057,
+                    -589773,
+                    -1572774,
+                    -3211133,
+                    -5373783,
+                    -7995188
+            );
+
     public GuitarItem(Properties properties) {
         super(properties);
-    }
-
-    public static Tool createToolProperties() {
-        return new Tool(List.of(), 1.0F, 2);
     }
 
     @Override
@@ -53,8 +64,8 @@ public class GuitarItem extends Item {
                 for (int i = 0; i < projectileCount; i++) {
                     float angle = f2 + f3 * (float) ((i + 1) / 2) * f1;
                     f3 = -f3;
-                    MagicNote magicNote = new MagicNote(level, player);
 
+                    MagicNote magicNote = new MagicNote(level, player, NOTE_COLORS.get(player.getRandom().nextInt(NOTE_COLORS.size())));
                     magicNote.shootFromRotation(player, player.getXRot(), player.getYRot() + angle, 0.0F, 0.2f, 2.0f);
                     magicNote.animate();
                     level.addFreshEntity(magicNote);
@@ -62,20 +73,5 @@ public class GuitarItem extends Item {
                 }
             }
         }
-    }
-
-    @Override
-    public @NotNull UseAnim getUseAnimation(@NotNull ItemStack stack) {
-        return UseAnim.BOW;
-    }
-
-    @Override
-    public int getUseDuration(@NotNull ItemStack stack, @NotNull LivingEntity entity) {
-        return 72000;
-    }
-
-    @SuppressWarnings("unused")
-    public int getDurabilityUse(ItemStack stack) {
-        return 1;
     }
 }

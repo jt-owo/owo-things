@@ -17,9 +17,12 @@ public class ThingsItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         basicItem(ThingsItems.NOTE.get());
+        basicItem(ThingsItems.SYMPHONIC_UPGRADE_SMITHING_TEMPLATE.get());
+        handheldItem(ThingsItems.CEREMONIAL_DAGGER.get());
+        handheldItem(ThingsItems.SCULK_HORN.get());
     }
 
-    @SuppressWarnings({"UnusedReturnValue", "unused"})
+    @SuppressWarnings({"UnusedReturnValue, unused"})
     private ItemModelBuilder handheldItem(DeferredItem<?> item) {
         return withExistingParent(item.getId().getPath(),
                 ResourceLocation.parse("item/handheld")).texture("layer0",
