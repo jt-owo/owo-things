@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "owothings:item/phase_saber_overlay",
+    "layer1": "owothings:item/phase_saber_2d"
+  }
+}

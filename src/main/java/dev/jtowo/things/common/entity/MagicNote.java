@@ -50,9 +50,6 @@ public class MagicNote extends ThrowableItemProjectile {
         return ColorParticleOption.create(ParticleTypes.ENTITY_EFFECT, 0);
     }
 
-    /**
-     * Handles an entity event received from a {@link net.minecraft.network.protocol.game.ClientboundEntityEventPacket}.
-     */
     @Override
     public void handleEntityEvent(byte id) {
         if (id == EntityEvent.DEATH) {
@@ -65,7 +62,7 @@ public class MagicNote extends ThrowableItemProjectile {
     }
 
     /**
-     * Called when the NoteEntity hits an entity
+     * Called when a NoteEntity hits an entity
      */
     @Override
     protected void onHitEntity(@NotNull EntityHitResult result) {
@@ -75,7 +72,7 @@ public class MagicNote extends ThrowableItemProjectile {
     }
 
     /**
-     * Called when this NoteEntity hits a block or entity.
+     * Called when a NoteEntity hits a block or entity.
      */
     @Override
     protected void onHit(@NotNull HitResult result) {

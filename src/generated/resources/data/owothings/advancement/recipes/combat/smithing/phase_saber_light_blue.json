@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_phase_saber": {
+      "conditions": {
+        "items": [
+          {
+            "items": "owothings:phase_saber"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "owothings:smithing/phase_saber_light_blue"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_phase_saber"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "owothings:smithing/phase_saber_light_blue"
+    ]
+  }
+}

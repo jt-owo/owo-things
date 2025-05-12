@@ -1,0 +1,14 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "owothings:item/phase_saber"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "owothings:active": 1
+      },
+      "model": "owothings:item/phase_saber_active"
+    }
+  ]
+}

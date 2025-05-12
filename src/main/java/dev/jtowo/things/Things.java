@@ -1,9 +1,6 @@
 package dev.jtowo.things;
 
-import dev.jtowo.things.core.registry.ThingsCreativeModeTabs;
-import dev.jtowo.things.core.registry.ThingsEntities;
-import dev.jtowo.things.core.registry.ThingsItems;
-import dev.jtowo.things.core.registry.ThingsLootModifiers;
+import dev.jtowo.things.core.registry.*;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraft.world.item.component.DyedItemColor;
@@ -30,6 +27,7 @@ public class Things {
         ThingsCreativeModeTabs.register(eventBus);
         ThingsItems.register(eventBus);
         ThingsEntities.register(eventBus);
+        ThingsDataComponents.register(eventBus);
         ThingsLootModifiers.register(eventBus);
 
         NeoForge.EVENT_BUS.register(this);
@@ -46,6 +44,7 @@ public class Things {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            ThingsItemProperties.register();
             EntityRenderers.register(ThingsEntities.MAGIC_NOTE.get(), ThrownItemRenderer::new);
         }
 
@@ -56,6 +55,13 @@ public class Things {
                             ? -1
                             : DyedItemColor.getOrDefault(stack, -1),
                     ThingsItems.NOTE.value()
+            );
+
+            event.register(
+                    (stack, tintIndex) -> tintIndex > 0
+                            ? -1
+                            : DyedItemColor.getOrDefault(stack, -1),
+                    ThingsItems.PHASE_SABER.value()
             );
         }
     }

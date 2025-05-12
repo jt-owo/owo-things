@@ -1,0 +1,170 @@
+{
+  "credit": "Made with Blockbench",
+  "textures": {
+    "0": "owothings:item/phase_saber",
+    "particle": "owothings:item/phase_saber"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "owothings:active": 1
+      },
+      "model": "owothings:item/phase_saber_active"
+    }
+  ],
+  "elements": [
+    {
+      "name": "handle",
+      "from": [
+        7,
+        0,
+        7
+      ],
+      "to": [
+        9,
+        5,
+        9
+      ],
+      "rotation": {
+        "angle": 0,
+        "axis": "y",
+        "origin": [
+          7,
+          0,
+          7
+        ]
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            4,
+            5
+          ],
+          "texture": "#0"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            4,
+            5
+          ],
+          "texture": "#0"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            4,
+            5
+          ],
+          "texture": "#0"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            4,
+            5
+          ],
+          "texture": "#0"
+        },
+        "up": {
+          "uv": [
+            8,
+            4,
+            4,
+            0
+          ],
+          "texture": "#0"
+        },
+        "down": {
+          "uv": [
+            8,
+            4,
+            4,
+            8
+          ],
+          "texture": "#0"
+        }
+      }
+    }
+  ],
+  "display": {
+    "thirdperson_righthand": {
+      "translation": [
+        0,
+        4,
+        0
+      ]
+    },
+    "thirdperson_lefthand": {
+      "translation": [
+        0,
+        4,
+        0
+      ]
+    },
+    "firstperson_righthand": {
+      "translation": [
+        0,
+        4.5,
+        0
+      ]
+    },
+    "firstperson_lefthand": {
+      "translation": [
+        0,
+        4.5,
+        0
+      ]
+    },
+    "ground": {
+      "translation": [
+        0,
+        4.25,
+        0
+      ]
+    },
+    "gui": {
+      "rotation": [
+        -35,
+        0,
+        -35
+      ],
+      "translation": [
+        -1,
+        -1.5,
+        0
+      ],
+      "scale": [
+        1,
+        0.95,
+        1
+      ]
+    },
+    "fixed": {
+      "translation": [
+        0,
+        -2.5,
+        0
+      ]
+    }
+  },
+  "groups": [
+    {
+      "name": "handle",
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "color": 0,
+      "children": [
+        0
+      ]
+    }
+  ]
+}

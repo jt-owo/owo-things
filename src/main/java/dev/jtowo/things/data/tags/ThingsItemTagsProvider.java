@@ -2,6 +2,7 @@ package dev.jtowo.things.data.tags;
 
 import dev.jtowo.things.Things;
 import dev.jtowo.things.core.registry.ThingsItems;
+import dev.jtowo.things.core.registry.ThingsTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
@@ -26,5 +27,8 @@ public class ThingsItemTagsProvider extends ItemTagsProvider {
 
         tag(ItemTags.CROSSBOW_ENCHANTABLE)
                 .add(ThingsItems.MAGICAL_GUITAR.get());
+
+        tag(ThingsTags.Items.PHASE_SABERS)
+                .add(ThingsItems.PHASE_SABER.get());
     }
 }

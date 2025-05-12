@@ -21,6 +21,7 @@ public class ThingsCreativeModeTabs {
                         output.accept(ThingsItems.DEBUG_RAYCAST_STICK);
                         output.accept(ThingsItems.MAGICAL_GUITAR);
                         output.accept(ThingsItems.SCULK_HORN);
+                        output.accept(ThingsItems.PHASE_SABER);
                         output.accept(ThingsItems.SYMPHONIC_UPGRADE_SMITHING_TEMPLATE);
                     }).build());
 

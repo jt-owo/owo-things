@@ -51,7 +51,6 @@ public abstract class RaycastItem extends MusicWeaponItem {
         }
 
         List<EntityHitResult> entityResults = performEntityRayTrace(level, player, direction, startPos, endPos);
-
         for (EntityHitResult entityResult : entityResults) {
             Entity entity = entityResult.getEntity();
             if (entity instanceof LivingEntity target) {

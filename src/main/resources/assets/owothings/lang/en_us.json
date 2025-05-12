@@ -1,4 +1,6 @@
 {
+  "advancements.owothings.things.root.title": "owo Things",
+  "advancements.owothings.things.root.description": "Welcome to owo Things",
   "creativetab.owothings.items": "owo Things",
   "item.owothings.magical_guitar": "Magical Guitar",
   "item.owothings.note": "Note",
@@ -13,5 +15,7 @@
   "item.owothings.symphonic_smithing_template": "Smithing Template",
   "upgrade.owothings.symphonic_upgrade": "Symphonic Upgrade",
   "item.owothings.sculk_horn": "Sculk Horn",
-  "item.owothings.debug_raycast_stick": "Debug Raycast Stick"
+  "item.owothings.debug_raycast_stick": "Debug Raycast Stick",
+  "item.owothings.phase_saber": "Phase Saber",
+  "item.owothings.phase_saber.crystal_description": "Crystal: %s"
 }

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "item": "minecraft:beacon"
+    },
+    "N": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "R": {
+      "tag": "c:storage_blocks/redstone"
+    }
+  },
+  "pattern": [
+    "NBN",
+    "NRN",
+    "NNN"
+  ],
+  "result": {
+    "count": 1,
+    "id": "owothings:phase_saber"
+  }
+}

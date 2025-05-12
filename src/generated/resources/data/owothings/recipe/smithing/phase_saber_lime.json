@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:emerald"
+  },
+  "base": {
+    "item": "owothings:phase_saber"
+  },
+  "result": {
+    "components": {
+      "minecraft:dyed_color": {
+        "rgb": 8439583,
+        "show_in_tooltip": false
+      }
+    },
+    "count": 1,
+    "id": "owothings:phase_saber"
+  },
+  "template": {
+    "item": "minecraft:lime_dye"
+  }
+}
