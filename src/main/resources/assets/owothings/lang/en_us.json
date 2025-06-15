@@ -17,5 +17,8 @@
   "item.owothings.sculk_horn": "Sculk Horn",
   "item.owothings.debug_raycast_stick": "Debug Raycast Stick",
   "item.owothings.phase_saber": "Phase Saber",
-  "item.owothings.phase_saber.crystal_description": "Crystal: %s"
+  "item.owothings.phase_saber.crystal_description": "Crystal: %s",
+  "owothings.toggle_item": "%s - %s",
+  "owothings.disabled": "Disabled",
+  "owothings.enabled": "Enabled"
 }

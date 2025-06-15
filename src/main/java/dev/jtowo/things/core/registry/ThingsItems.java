@@ -1,7 +1,6 @@
 package dev.jtowo.things.core.registry;
 
 import dev.jtowo.things.Things;
-import dev.jtowo.things.common.component.CodecValue;
 import dev.jtowo.things.common.item.CeremonialDaggerItem;
 import dev.jtowo.things.common.item.GuitarItem;
 import dev.jtowo.things.common.item.PhaseSaberItem;
@@ -45,8 +44,8 @@ public class ThingsItems {
     public static final DeferredItem<Item> PHASE_SABER = ITEMS.register("phase_saber",
             () -> new PhaseSaberItem(new Item.Properties()
                     .rarity(Rarity.EPIC)
-                    .stacksTo(1)
-                    .component(ThingsDataComponents.ACTIVE, CodecValue.FALSE)));
+                    .component(ThingsDataComponents.ACTIVE, false)
+                    .attributes(PhaseSaberItem.createAttributes(0.0f, -2.4F))));
 
     public static final DeferredItem<Item> CEREMONIAL_DAGGER = ITEMS.register("ceremonial_dagger",
             () -> new CeremonialDaggerItem(new Item.Properties()
